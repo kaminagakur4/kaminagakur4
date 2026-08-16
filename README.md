@@ -26,9 +26,11 @@
 ##
 
 <div>
-  <a href="#"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge" alt="Email" title="kami@moriwa.ai"></a>
+  <a href="mailto:kami@moriwa.ai"><img src="https://img.shields.io/badge/kami@moriwa.ai-EA4335?style=for-the-badge" alt="Email: kami@moriwa.ai"></a>
   <a href="https://www.tiktok.com/@kaminagakura"><img src="https://img.shields.io/badge/TikTok-FE2C55?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" title="swishi"></a>
+  <!-- href="#" porque nick de Discord não tem URL, só o ID numérico é linkável. Sem
+       href algum, o GitHub embrulha a imagem e o clique abre o badge numa aba nova. -->
+  <a href="#"><img src="https://img.shields.io/badge/swishi-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord: swishi"></a>
 </div>
 
 ##
