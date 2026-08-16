@@ -12,49 +12,38 @@ concurrency:
   group: cards
   cancel-in-progress: true
 
+# Um arquivo por card, não dois. A cor 7A7A85 foi escolhida por contraste: 4.24
+# no tema claro e 4.46 no escuro, o melhor pior-caso. Duas versões exigiriam
+# <picture>, e dentro dele o <img> precisa ser filho direto, o que impede
+# envolvê-lo num link. Sem link, o GitHub abre o SVG numa aba nova ao clicar.
+env:
+  COR: title_color=7A7A85&text_color=7A7A85&bg_color=00000000&hide_border=true
+
 jobs:
   cards:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      # Dois arquivos: o README escolhe um por prefers-color-scheme.
       # GRS_TOKEN (PAT) conta repositórios privados; sem ele o card só vê os públicos.
-      - name: Card escuro
-        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
-        with:
-          card: stats
-          path: profile/stats-dark.svg
-          token: ${{ secrets.GRS_TOKEN || secrets.GITHUB_TOKEN }}
-          fail_on_error: "true"
-          options: show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=A1A1AA&text_color=A1A1AA&icon_color=557EE5&ring_color=557EE5
-
-      - name: Card claro
-        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
-        with:
-          card: stats
-          path: profile/stats-light.svg
-          token: ${{ secrets.GRS_TOKEN || secrets.GITHUB_TOKEN }}
-          fail_on_error: "true"
-          options: show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=52525B&text_color=52525B&icon_color=557EE5&ring_color=557EE5
-
-      - name: Linguagens, escuro
+      - name: Linguagens
         uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
         with:
           card: top-langs
-          path: profile/langs-dark.svg
+          path: profile/langs.svg
           token: ${{ secrets.GRS_TOKEN || secrets.GITHUB_TOKEN }}
           fail_on_error: "true"
-          options: layout=compact&langs_count=8&card_width=340&hide_border=true&bg_color=00000000&title_color=A1A1AA&text_color=A1A1AA
+          options: layout=compact&langs_count=8&card_width=340&${{ env.COR }}
 
-      - name: Linguagens, claro
+      # Fora do README hoje, gerado para voltar em uma colagem.
+      - name: Estatísticas
         uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
         with:
-          card: top-langs
-          path: profile/langs-light.svg
+          card: stats
+          path: profile/stats.svg
           token: ${{ secrets.GRS_TOKEN || secrets.GITHUB_TOKEN }}
           fail_on_error: "true"
-          options: layout=compact&langs_count=8&card_width=340&hide_border=true&bg_color=00000000&title_color=52525B&text_color=52525B
+          options: show_icons=true&include_all_commits=true&icon_color=557EE5&ring_color=557EE5&${{ env.COR }}
 
       - name: Comitar
         run: |
