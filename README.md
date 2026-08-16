@@ -26,7 +26,9 @@
 ##
 
 <div>
-  <a href="mailto:kami@moriwa.ai"><img src="https://img.shields.io/badge/kami@moriwa.ai-EA4335?style=for-the-badge" alt="Email: kami@moriwa.ai"></a>
+  <!-- O logo do envelope vai embutido como data URI: o shields só tem ícones de
+       marca, e o e-mail é de domínio próprio, então Gmail ou Mail.ru seria falso. -->
+  <a href="mailto:kami@moriwa.ai"><img src="https://img.shields.io/badge/kami@moriwa.ai-EA4335?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yIDVhMiAyIDAgMCAxIDItMmgxNmEyIDIgMCAwIDEgMiAydjE0YTIgMiAwIDAgMS0yIDJINGEyIDIgMCAwIDEtMi0yVjV6bTIuNC42TDEyIDExbDcuNi01LjRINC40eiIvPjwvc3ZnPg%3D%3D" alt="Email: kami@moriwa.ai"></a>
   <a href="https://www.tiktok.com/@kaminagakura"><img src="https://img.shields.io/badge/TikTok-FE2C55?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok"></a>
   <!-- href="#" porque nick de Discord não tem URL, só o ID numérico é linkável. Sem
        href algum, o GitHub embrulha a imagem e o clique abre o badge numa aba nova. -->
