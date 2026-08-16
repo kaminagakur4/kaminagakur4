@@ -31,18 +31,18 @@
 
 ##
 
-<!-- Cards gerados por .github/workflows/cards.yml e versionados em profile/. -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg">
-  <img src="./profile/stats-light.svg" alt="Estatísticas do GitHub" height="165">
-</picture>
+<!-- Gerados por .github/workflows/cards.yml e versionados em profile/. O card de
+     estatísticas segue sendo gerado; para voltar a exibi-lo, basta colar:
+     <picture>
+       <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg">
+       <img src="./profile/stats-light.svg" alt="Estatísticas do GitHub" height="190">
+     </picture>
+     A sequência é o único card que vem de serviço externo: a Action não gera esse tipo. -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile/langs-dark.svg">
-  <img src="./profile/langs-light.svg" alt="Linguagens mais usadas" height="165">
+  <img src="./profile/langs-light.svg" alt="Linguagens mais usadas" height="190">
 </picture>
-
-<!-- Sequência: único card que vem de serviço externo, não há gerador equivalente em Action. -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=kaminagakur4&locale=pt_BR&hide_border=true&background=00000000&ring=557EE5&fire=557EE5&currStreakLabel=557EE5&stroke=27272A&currStreakNum=E4E4E7&sideNums=A1A1AA&sideLabels=A1A1AA&dates=71717A">
-  <img src="https://streak-stats.demolab.com/?user=kaminagakur4&locale=pt_BR&hide_border=true&background=00000000&ring=557EE5&fire=557EE5&currStreakLabel=557EE5&stroke=E4E4E7&currStreakNum=18181B&sideNums=52525B&sideLabels=52525B&dates=71717A" alt="Sequência de contribuições" height="165">
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=kaminagakur4&locale=pt_BR&card_width=440&hide_border=true&background=00000000&ring=557EE5&fire=557EE5&currStreakLabel=557EE5&stroke=27272A&currStreakNum=E4E4E7&sideNums=A1A1AA&sideLabels=A1A1AA&dates=71717A">
+  <img src="https://streak-stats.demolab.com/?user=kaminagakur4&locale=pt_BR&card_width=440&hide_border=true&background=00000000&ring=557EE5&fire=557EE5&currStreakLabel=557EE5&stroke=E4E4E7&currStreakNum=18181B&sideNums=52525B&sideLabels=52525B&dates=71717A" alt="Sequência de contribuições" height="190">
 </picture>
