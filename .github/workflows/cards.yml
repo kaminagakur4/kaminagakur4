@@ -43,8 +43,10 @@ jobs:
 
       - name: Comitar
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@users.noreply.github.com
+          # Endereço noreply, não o pessoal: este arquivo é público e e-mail
+          # em texto puro vira alvo de raspagem. O GitHub atribui igual.
+          git config user.name kaminagakur4
+          git config user.email 277797585+kaminagakur4@users.noreply.github.com
           git add profile/*.svg
           git diff --cached --quiet || git commit -m "chore: atualiza cards do README"
           git push
