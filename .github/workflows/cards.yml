@@ -1,0 +1,47 @@
+name: Atualizar cards do README
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cards
+  cancel-in-progress: true
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Dois arquivos: o README escolhe um por prefers-color-scheme.
+      # GRS_TOKEN (PAT) conta repositórios privados; sem ele o card só vê os públicos.
+      - name: Card escuro
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: stats
+          path: profile/stats-dark.svg
+          token: ${{ secrets.GRS_TOKEN || secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          options: show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=A1A1AA&text_color=A1A1AA&icon_color=557EE5&ring_color=557EE5
+
+      - name: Card claro
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: stats
+          path: profile/stats-light.svg
+          token: ${{ secrets.GRS_TOKEN || secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          options: show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=52525B&text_color=52525B&icon_color=557EE5&ring_color=557EE5
+
+      - name: Comitar
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@users.noreply.github.com
+          git add profile/*.svg
+          git diff --cached --quiet || git commit -m "chore: atualiza cards do README"
+          git push

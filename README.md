@@ -37,10 +37,10 @@
 
 <h3 align="center">GitHub</h3>
 
-<!-- Fonte do card. Trocar o host aqui (e só aqui) para apontar ao instance próprio. -->
+<!-- Cards gerados por .github/workflows/cards.yml e versionados em profile/. -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=kaminagakur4&show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=A1A1AA&text_color=A1A1AA&icon_color=557EE5&ring_color=557EE5">
-    <img src="https://github-readme-stats.vercel.app/api?username=kaminagakur4&show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=52525B&text_color=52525B&icon_color=557EE5&ring_color=557EE5" alt="GitHub stats" height="170">
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg">
+    <img src="./profile/stats-light.svg" alt="Estatísticas do GitHub" height="170">
   </picture>
 </p>
