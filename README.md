@@ -1,44 +1,38 @@
-<h1 align="center">kami</h1>
+## kami
 
-<p align="center">
-  <a href="mailto:japa999vlr@gmail.com"><img src="https://img.shields.io/badge/Email-111111?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>&nbsp;
-  <a href="https://www.tiktok.com/@kaminagakura"><img src="https://img.shields.io/badge/TikTok-111111?style=flat-square&logo=tiktok&logoColor=white" alt="TikTok"></a>&nbsp;
-  <img src="https://img.shields.io/badge/swishi-111111?style=flat-square&logo=discord&logoColor=white" alt="Discord: swishi" title="Discord: swishi">
-</p>
+<div>
+  <img align="center" alt="JavaScript" title="JavaScript" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+  <img align="center" alt="TypeScript" title="TypeScript" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg">
+  <img align="center" alt="React" title="React" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="center" alt="Node.js" title="Node.js" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
+  <img align="center" alt="HTML5" title="HTML5" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="CSS3" title="CSS3" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="Tailwind CSS" title="Tailwind CSS" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg">
+  <img align="center" alt="Python" title="Python" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+</div>
 
-<br>
+<div>
+  <img align="center" alt="PostgreSQL" title="PostgreSQL" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg">
+  <img align="center" alt="SQLite" title="SQLite" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg">
+  <img align="center" alt="Supabase" title="Supabase" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg">
+  <img align="center" alt="Swift" title="Swift" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg">
+  <img align="center" alt="Docker" title="Docker" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg">
+  <img align="center" alt="Three.js" title="Three.js" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg">
+  <img align="center" alt="Git" title="Git" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
+</div>
 
-<h3 align="center">Stack</h3>
+##
 
-<p align="center">
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" title="HTML5">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" title="CSS3">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" title="Tailwind CSS">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" title="Python">
-</p>
+<div>
+  <a href="mailto:japa999vlr@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
+  <a href="https://www.tiktok.com/@kaminagakura"><img src="https://img.shields.io/badge/TikTok-FE2C55?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok"></a>
+  <img src="https://img.shields.io/badge/swishi-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord: swishi" title="Discord: swishi">
+</div>
 
-<p align="center">
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" alt="SQLite" title="SQLite">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg" alt="Supabase" title="Supabase">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" alt="Swift" title="Swift">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker" title="Docker">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg" alt="Three.js" title="Three.js">&nbsp;&nbsp;
-  <img height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" title="Git">
-</p>
-
-<br>
-
-<h3 align="center">GitHub</h3>
+##
 
 <!-- Cards gerados por .github/workflows/cards.yml e versionados em profile/. -->
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg">
-    <img src="./profile/stats-light.svg" alt="Estatísticas do GitHub" height="170">
-  </picture>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg">
+  <img src="./profile/stats-light.svg" alt="Estatísticas do GitHub" height="175">
+</picture>
