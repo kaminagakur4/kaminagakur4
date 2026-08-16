@@ -24,7 +24,7 @@
 ##
 
 <div>
-  <a href="mailto:japa999vlr@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
+  <a href="mailto:kami@moriwa.ai"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logoColor=white" alt="Email"></a>
   <a href="https://www.tiktok.com/@kaminagakura"><img src="https://img.shields.io/badge/TikTok-FE2C55?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok"></a>
   <img src="https://img.shields.io/badge/swishi-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord: swishi" title="Discord: swishi">
 </div>
