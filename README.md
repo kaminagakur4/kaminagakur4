@@ -31,8 +31,6 @@
   <a href="#"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" title="swishi"></a>
 </div>
 
-`kami@moriwa.ai` &nbsp;·&nbsp; Discord `swishi`
-
 ##
 
 <!-- Gerados por .github/workflows/cards.yml e versionados em profile/. Para voltar
