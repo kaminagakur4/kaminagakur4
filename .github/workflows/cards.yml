@@ -38,6 +38,24 @@ jobs:
           fail_on_error: "true"
           options: show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=52525B&text_color=52525B&icon_color=557EE5&ring_color=557EE5
 
+      - name: Linguagens, escuro
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: top-langs
+          path: profile/langs-dark.svg
+          token: ${{ secrets.GRS_TOKEN || secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          options: layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=A1A1AA&text_color=A1A1AA
+
+      - name: Linguagens, claro
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: top-langs
+          path: profile/langs-light.svg
+          token: ${{ secrets.GRS_TOKEN || secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          options: layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=52525B&text_color=52525B
+
       - name: Comitar
         run: |
           git config user.name github-actions
