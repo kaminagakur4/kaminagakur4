@@ -1,10 +1,6 @@
 <h1 align="center">kami</h1>
 
 <p align="center">
-  Construo produto de ponta a ponta, do banco de dados à tela.
-</p>
-
-<p align="center">
   <a href="mailto:japa999vlr@gmail.com"><img src="https://img.shields.io/badge/Email-111111?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>&nbsp;
   <a href="https://www.tiktok.com/@kaminagakura"><img src="https://img.shields.io/badge/TikTok-111111?style=flat-square&logo=tiktok&logoColor=white" alt="TikTok"></a>&nbsp;
   <img src="https://img.shields.io/badge/swishi-111111?style=flat-square&logo=discord&logoColor=white" alt="Discord: swishi" title="Discord: swishi">
