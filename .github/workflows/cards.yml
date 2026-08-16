@@ -8,14 +8,10 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: cards
-  cancel-in-progress: true
-
-# Um arquivo por card, não dois. A cor 7A7A85 foi escolhida por contraste: 4.24
-# no tema claro e 4.46 no escuro, o melhor pior-caso. Duas versões exigiriam
-# <picture>, e dentro dele o <img> precisa ser filho direto, o que impede
-# envolvê-lo num link. Sem link, o GitHub abre o SVG numa aba nova ao clicar.
+# Um arquivo por card, não dois: duas versões exigiriam <picture>, e dentro dele
+# o <img> tem de ser filho direto, o que impede envolvê-lo num link. Sem link, o
+# GitHub abre o SVG numa aba nova ao clicar. Daí a cor única 7A7A85, o melhor
+# pior-caso de contraste medido (4.24 no tema claro, 4.46 no escuro).
 env:
   COR: title_color=7A7A85&text_color=7A7A85&bg_color=00000000&hide_border=true
 

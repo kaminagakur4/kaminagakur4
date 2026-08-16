@@ -3,24 +3,24 @@
 <!-- Cada imagem vai dentro de um <a>: imagem solta o GitHub embrulha num link
      target="_blank" para o próprio arquivo, e o clique abre o SVG numa aba nova. -->
 <div>
-  <a href="#"><img align="center" alt="JavaScript" title="JavaScript" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"></a>
-  <a href="#"><img align="center" alt="TypeScript" title="TypeScript" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"></a>
-  <a href="#"><img align="center" alt="React" title="React" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"></a>
-  <a href="#"><img align="center" alt="Node.js" title="Node.js" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"></a>
-  <a href="#"><img align="center" alt="HTML5" title="HTML5" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"></a>
-  <a href="#"><img align="center" alt="CSS3" title="CSS3" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"></a>
-  <a href="#"><img align="center" alt="Tailwind CSS" title="Tailwind CSS" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg"></a>
-  <a href="#"><img align="center" alt="Python" title="Python" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"></a>
+  <a href="#"><img align="center" alt="JavaScript" title="JavaScript" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"></a>
+  <a href="#"><img align="center" alt="TypeScript" title="TypeScript" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"></a>
+  <a href="#"><img align="center" alt="React" title="React" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"></a>
+  <a href="#"><img align="center" alt="Node.js" title="Node.js" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"></a>
+  <a href="#"><img align="center" alt="HTML5" title="HTML5" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"></a>
+  <a href="#"><img align="center" alt="CSS3" title="CSS3" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"></a>
+  <a href="#"><img align="center" alt="Tailwind CSS" title="Tailwind CSS" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg"></a>
+  <a href="#"><img align="center" alt="Python" title="Python" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"></a>
 </div>
 
 <div>
-  <a href="#"><img align="center" alt="PostgreSQL" title="PostgreSQL" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"></a>
-  <a href="#"><img align="center" alt="SQLite" title="SQLite" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg"></a>
-  <a href="#"><img align="center" alt="Supabase" title="Supabase" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg"></a>
-  <a href="#"><img align="center" alt="Swift" title="Swift" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg"></a>
-  <a href="#"><img align="center" alt="Docker" title="Docker" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg"></a>
-  <a href="#"><img align="center" alt="Three.js" title="Three.js" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg"></a>
-  <a href="#"><img align="center" alt="Git" title="Git" height="40" width="52" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"></a>
+  <a href="#"><img align="center" alt="PostgreSQL" title="PostgreSQL" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"></a>
+  <a href="#"><img align="center" alt="SQLite" title="SQLite" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg"></a>
+  <a href="#"><img align="center" alt="Supabase" title="Supabase" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg"></a>
+  <a href="#"><img align="center" alt="Swift" title="Swift" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg"></a>
+  <a href="#"><img align="center" alt="Docker" title="Docker" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg"></a>
+  <a href="#"><img align="center" alt="Three.js" title="Three.js" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg"></a>
+  <a href="#"><img align="center" alt="Git" title="Git" height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"></a>
 </div>
 
 ##
