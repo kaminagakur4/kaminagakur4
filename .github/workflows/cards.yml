@@ -133,7 +133,15 @@ jobs:
       - name: Fixar o README no commit dos cards
         if: steps.cards.outputs.sha != ''
         run: |
-          python3 scripts/pin-cards.py --fixar "${{ steps.cards.outputs.sha }}"
+          # --sequencia SÓ quando o serviço de fora respondeu um card de verdade.
+          # Fixado durante uma falha dele, o camo busca na URL fria, recebe a
+          # carinha triste e o card SOME (medido em 17/08/2026). Sem pino novo o
+          # camo segue servindo a última cópia boa: velha, mas na tela.
+          if [ -n "${{ steps.fora.outputs.marca }}" ]; then
+            python3 scripts/pin-cards.py --fixar "${{ steps.cards.outputs.sha }}" --sequencia
+          else
+            python3 scripts/pin-cards.py --fixar "${{ steps.cards.outputs.sha }}"
+          fi
           git add README.md
           if git diff --cached --quiet; then
             echo "README já estava no pino certo."

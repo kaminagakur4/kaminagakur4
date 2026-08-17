@@ -20,9 +20,18 @@ obrigado a buscar. Para os nossos cards a fixação é o commit
 (`@<sha>/profile/langs.svg`), que o jsdelivr serve como "immutable"; para o
 card de fora, que não tem commit, é um `&v=<sha>` que ele ignora e o camo não.
 
-Dois modos, os dois usados pelo .github/workflows/cards.yml:
-  --verificar        guarda: reprova raw, caminho relativo e pino faltando
-  --fixar <sha>      troca todos os pinos por <sha>
+Assimetria de propósito entre os dois. O pino dos NOSSOS cards é obrigatório: o
+arquivo está no commit, então a URL nova sempre existe. O do card de FORA é
+opcional, e só se troca quando o serviço respondeu um card de verdade. Aprendido
+na prática em 17/08/2026: fixei o &v= à mão durante um outage da API do GitHub,
+o camo foi buscar na URL fria, o streak-stats devolveu a carinha triste, e o
+card SUMIU da página. Sem pino novo, o camo segue servindo a última cópia boa,
+que é velha mas está lá. Card de ontem é melhor que card nenhum.
+
+Modos, os dois usados pelo .github/workflows/cards.yml:
+  --verificar             guarda: reprova raw, caminho relativo e pino faltando
+  --fixar <sha>           troca o pino dos nossos cards
+  --fixar <sha> --sequencia   troca também o do card de fora (só se ele está de pé)
 """
 
 import argparse
@@ -73,26 +82,28 @@ def verificar(texto):
             else:
                 pinos.add(m.group(2))
 
+        # O card de fora NÃO é exigido pinado: quando o serviço está fora, o
+        # certo é justamente não ter pino novo. Mas se houver, tem de ser um sha.
         if "streak-stats.demolab.com" in s:
-            v = re.search(r"[?&]v=([0-9a-f]{7,40})", s)
-            if not v:
-                ruins.append("card de fora sem &v=<sha>; o camo guardaria 24h: %s" % s)
-            else:
-                pinos.add(v.group(1))
+            v = re.search(r"[?&]v=([^&\"]*)", s)
+            if v and not PINO.match(v.group(1)):
+                ruins.append("card de fora com &v= que não é sha de 40 hex (%r)" % v.group(1))
 
-    # Pinos diferentes significam rewrite pela metade, com meia tela velha.
+    # Pinos diferentes entre os NOSSOS cards significam rewrite pela metade, com
+    # meia tela velha. O do card de fora pode ficar atrás e isso é esperado.
     if len(pinos) > 1:
-        ruins.append("pinos divergentes no README: %s" % ", ".join(sorted(pinos)))
+        ruins.append("pinos divergentes nos nossos cards: %s" % ", ".join(sorted(pinos)))
     if not pinos:
-        ruins.append("nenhum card fixado; nada obrigaria o camo a buscar de novo")
+        ruins.append("nenhum card nosso fixado; nada obrigaria o camo a buscar de novo")
     return ruins
 
 
-def fixar(texto, sha):
+def fixar(texto, sha, sequencia=False):
     if not PINO.match(sha):
         raise SystemExit("pino tem de ser um sha de 40 hex, recebi %r" % sha)
     texto = NOSSO.sub(lambda m: m.group(1) + sha + m.group(3), texto)
-    texto = FORA.sub(lambda m: m.group(1) + "&v=" + sha, texto)
+    if sequencia:
+        texto = FORA.sub(lambda m: m.group(1) + "&v=" + sha, texto)
     return texto
 
 
@@ -100,12 +111,17 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--verificar", action="store_true")
     p.add_argument("--fixar", metavar="SHA")
+    p.add_argument(
+        "--sequencia",
+        action="store_true",
+        help="troca também o pino do card de fora; só passe se ele respondeu um card de verdade",
+    )
     a = p.parse_args()
 
     texto = README.read_text()
 
     if a.fixar:
-        novo = fixar(texto, a.fixar)
+        novo = fixar(texto, a.fixar, a.sequencia)
         ruins = verificar(novo)
         if ruins:
             # Nunca gravar um README que a própria guarda reprova.

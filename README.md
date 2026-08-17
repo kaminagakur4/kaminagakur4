@@ -59,4 +59,4 @@
      <a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@3c4953779f762ee4d12c7a5a5925a65feb8c9217/profile/stats.svg" alt="Estatísticas do GitHub" height="190"></a>
      A sequência é o único card que vem de serviço externo: a Action não gera esse tipo. -->
 <a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@3c4953779f762ee4d12c7a5a5925a65feb8c9217/profile/langs.svg" alt="Linguagens mais usadas" height="190"></a>
-<a href="#"><img src="https://streak-stats.demolab.com/?user=kaminagakur4&locale=pt_BR&card_width=440&hide_border=true&background=00000000&ring=557EE5&fire=557EE5&currStreakLabel=557EE5&stroke=7A7A85&currStreakNum=7A7A85&sideNums=7A7A85&sideLabels=7A7A85&dates=7A7A85&v=3c4953779f762ee4d12c7a5a5925a65feb8c9217" alt="Sequência de contribuições" height="190"></a>
+<a href="#"><img src="https://streak-stats.demolab.com/?user=kaminagakur4&locale=pt_BR&card_width=440&hide_border=true&background=00000000&ring=557EE5&fire=557EE5&currStreakLabel=557EE5&stroke=7A7A85&currStreakNum=7A7A85&sideNums=7A7A85&sideLabels=7A7A85&dates=7A7A85" alt="Sequência de contribuições" height="190"></a>
