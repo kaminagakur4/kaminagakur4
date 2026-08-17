@@ -75,13 +75,10 @@ jobs:
           git diff --cached --quiet || git commit -m "chore: atualiza cards do README"
           git push
 
-      # O jsdelivr guarda ref de branch por até 12h, então sem purgar o card novo
-      # só apareceria no dia seguinte. Falha aqui não derruba o job: o commit já
-      # está feito e o pior caso é o cache expirar sozinho.
-      - name: Purgar o cache do jsdelivr
-        continue-on-error: true
-        run: |
-          for f in langs stats; do
-            curl -sS -o /dev/null -w "$f: %{http_code}\n" \
-              "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/profile/$f.svg"
-          done
+      # NÃO purgue o cache do jsdelivr aqui. Tentado em 17/08/2026 e revertido: o
+      # purge deixa o jsdelivr frio, e neste repo, que não tem tag alguma, o
+      # primeiro fetch de @main responde 404 ("Failed to fetch from GitHub"). O
+      # camo do GitHub busca nessa janela e guarda a falha, então o card SOME da
+      # página. Medido no Chrome: 19 das 20 imagens carregaram, e a que faltou foi
+      # justamente a purgada. Sem purge o jsdelivr serve o último arquivo bom por
+      # até 12h. Card de estatística um dia atrasado ninguém vê; card ausente, sim.
