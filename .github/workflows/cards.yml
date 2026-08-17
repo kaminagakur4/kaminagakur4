@@ -21,6 +21,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # O README não pode apontar para raw.githubusercontent.com: o GitHub não
+      # proxia pelo camo o que já é do domínio dele, então o navegador de quem
+      # visita busca o raw direto e leva 429 por IP. Foi o que apagou os quinze
+      # ícones e o card de linguagens em 17/08/2026. Caminho relativo conta como
+      # raw: o GitHub o reescreve para lá. Tudo passa pelo jsdelivr.
+      # Olha só os src, nunca o arquivo todo: o próprio README explica em comentário
+      # por que o raw não serve, e varrer o texto reprovaria a explicação.
+      - name: Guarda das imagens
+        run: |
+          srcs=$(grep -o 'src="[^"]*"' README.md)
+          echo "$srcs" | grep -c . | xargs -I{} echo "src encontrados: {}"
+          test "$(echo "$srcs" | grep -c .)" -ge 17 || {
+            echo "::error::menos src do que o esperado; a varredura não está vendo o README"
+            exit 1
+          }
+          if echo "$srcs" | grep 'raw\.githubusercontent\.com'; then
+            echo "::error::src aponta para raw.githubusercontent.com; use cdn.jsdelivr.net"
+            exit 1
+          fi
+          if echo "$srcs" | grep -E 'src="\.?/'; then
+            echo "::error::src relativo; o GitHub o reescreve para o raw"
+            exit 1
+          fi
+
       # GRS_TOKEN (PAT) conta repositórios privados; sem ele o card só vê os públicos.
       - name: Linguagens
         uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
@@ -50,3 +74,14 @@ jobs:
           git add profile/*.svg
           git diff --cached --quiet || git commit -m "chore: atualiza cards do README"
           git push
+
+      # O jsdelivr guarda ref de branch por até 12h, então sem purgar o card novo
+      # só apareceria no dia seguinte. Falha aqui não derruba o job: o commit já
+      # está feito e o pior caso é o cache expirar sozinho.
+      - name: Purgar o cache do jsdelivr
+        continue-on-error: true
+        run: |
+          for f in langs stats; do
+            curl -sS -o /dev/null -w "$f: %{http_code}\n" \
+              "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/profile/$f.svg"
+          done
