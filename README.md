@@ -48,10 +48,15 @@
 <!-- Gerados por .github/workflows/cards.yml e versionados em profile/, mas servidos
      pelo jsdelivr, não por caminho relativo: "./profile/langs.svg" o GitHub reescreve
      para raw.githubusercontent.com, o mesmo endereço que quebrou os ícones acima.
-     Como o jsdelivr guarda ref de branch por até 12h, o card pode aparecer com um
-     dia de atraso depois da Action; é o preço de ele aparecer.
+
+     O @<sha> e o &v=<sha> NÃO se escrevem à mão: quem os troca é o
+     scripts/pin-cards.py, chamado pela Action, e o cabeçalho dele explica por quê.
+     Em uma frase: o camo do GitHub obedece o max-age de quem entrega (12h no
+     jsdelivr, 24h no streak-stats, 24h até no card de ERRO dele), então o único
+     jeito de a tela mostrar HOJE é o ENDEREÇO mudar quando o dado muda. Trocar
+     isso por @main devolve o card de ontem, que é o defeito de 17/08/2026.
      Para voltar a exibir as estatísticas, que seguem sendo geradas, basta colar:
-     <a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@main/profile/stats.svg" alt="Estatísticas do GitHub" height="190"></a>
+     <a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@3c4953779f762ee4d12c7a5a5925a65feb8c9217/profile/stats.svg" alt="Estatísticas do GitHub" height="190"></a>
      A sequência é o único card que vem de serviço externo: a Action não gera esse tipo. -->
-<a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@main/profile/langs.svg" alt="Linguagens mais usadas" height="190"></a>
-<a href="#"><img src="https://streak-stats.demolab.com/?user=kaminagakur4&locale=pt_BR&card_width=440&hide_border=true&background=00000000&ring=557EE5&fire=557EE5&currStreakLabel=557EE5&stroke=7A7A85&currStreakNum=7A7A85&sideNums=7A7A85&sideLabels=7A7A85&dates=7A7A85" alt="Sequência de contribuições" height="190"></a>
+<a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@3c4953779f762ee4d12c7a5a5925a65feb8c9217/profile/langs.svg" alt="Linguagens mais usadas" height="190"></a>
+<a href="#"><img src="https://streak-stats.demolab.com/?user=kaminagakur4&locale=pt_BR&card_width=440&hide_border=true&background=00000000&ring=557EE5&fire=557EE5&currStreakLabel=557EE5&stroke=7A7A85&currStreakNum=7A7A85&sideNums=7A7A85&sideLabels=7A7A85&dates=7A7A85&v=3c4953779f762ee4d12c7a5a5925a65feb8c9217" alt="Sequência de contribuições" height="190"></a>
