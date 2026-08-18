@@ -18,9 +18,6 @@ permissions:
 # pior-caso de contraste medido (4.24 no tema claro, 4.46 no escuro).
 env:
   COR: title_color=7A7A85&text_color=7A7A85&bg_color=00000000&hide_border=true
-  # O mesmo endereço que o README usa, sem o &v=: é só para saber se o dado de
-  # lá mudou. Quem fixa o &v= é o scripts/pin-cards.py.
-  STREAK: https://streak-stats.demolab.com/?user=kaminagakur4&locale=pt_BR
 
 jobs:
   cards:
@@ -28,8 +25,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Reprova raw.githubusercontent.com, caminho relativo e pino faltando. O
-      # porquê de cada regra está no cabeçalho do script.
+      # Reprova host que calcula imagem por requisição, raw.githubusercontent,
+      # caminho relativo e pino faltando. O porquê de cada regra está no
+      # cabeçalho do script.
       - name: Guarda das imagens
         run: python3 scripts/pin-cards.py --verificar
 
@@ -53,25 +51,16 @@ jobs:
           fail_on_error: "true"
           options: show_icons=true&include_all_commits=true&locale=pt-br&icon_color=557EE5&ring_color=557EE5&${{ env.COR }}
 
-      # O card de sequência é o único que vem de serviço externo, então não há
-      # arquivo nosso para comparar: a Action busca a imagem dele e guarda uma
-      # impressão. Sem isso, num dia em que só a sequência mudasse, nada aqui
-      # mudaria, não haveria commit, e o pino imóvel congelaria a tela.
-      #
-      # Card de ERRO não conta como mudança. O streak-stats manda
-      # "max-age=86400" até na carinha triste (medido em 17/08/2026, durante um
-      # outage da API do GitHub), e fixar o README nele deixaria a tela triste
-      # até o dia seguinte. Em falha, o pino de antes continua valendo.
-      - name: A sequência mudou?
-        id: fora
-        run: |
-          curl -sS --max-time 30 "$STREAK" -o /tmp/streak.svg || true
-          if [ ! -s /tmp/streak.svg ] || grep -q 'Failed to retrieve' /tmp/streak.svg; then
-            echo "::warning::streak-stats indisponível; mantendo a fixação atual"
-            echo "marca=" >> "$GITHUB_OUTPUT"
-          else
-            echo "marca=$(sha256sum /tmp/streak.svg | cut -c1-16)" >> "$GITHUB_OUTPUT"
-          fi
+      # A sequência era o único card de serviço externo e quebrou duas vezes em
+      # dois dias; agora é arquivo nosso, como os outros. continue-on-error de
+      # propósito: se a API não responder, o SVG anterior continua no repo e na
+      # tela. Dado velho é aceitável, buraco na página não é.
+      - name: Sequência
+        id: sequencia
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GRS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: python3 scripts/gerar-sequencia.py
 
       - name: Comitar os cards
         id: cards
@@ -81,13 +70,9 @@ jobs:
           git config user.name kaminagakur4
           git config user.email 277797585+kaminagakur4@users.noreply.github.com
 
-          if [ -n "${{ steps.fora.outputs.marca }}" ]; then
-            echo "${{ steps.fora.outputs.marca }}" > profile/impressao.txt
-          fi
-
-          git add profile/langs.svg profile/stats.svg profile/impressao.txt
+          git add profile/*.svg
           if git diff --cached --quiet; then
-            echo "Nada mudou: nem os cards gerados nem a sequência. Sem commit."
+            echo "Nada mudou em nenhum card. Sem commit, sem pino novo."
             echo "sha=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -96,16 +81,14 @@ jobs:
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       # NUNCA fixar o README numa URL que o jsdelivr ainda não serve. Se o camo
-      # buscar nessa janela, ele guarda a FALHA e o card SOME da página: foi
-      # medido em 17/08/2026 com um passo de purge que se tentou e se removeu
-      # (19 das 20 imagens carregaram no Chrome, e a que faltou foi a purgada).
+      # buscar nessa janela, ele guarda a falha e o card some da página: foi
+      # medido em 17/08/2026 com um passo de purge que se tentou e se removeu.
       # Aquecer é um GET, não invalida nada, e é a ordem certa.
       - name: Aquecer o jsdelivr
-        id: quente
         if: steps.cards.outputs.sha != ''
         run: |
           falhou=0
-          for f in langs stats; do
+          for f in langs stats sequencia; do
             url="https://cdn.jsdelivr.net/gh/${{ github.repository }}@${{ steps.cards.outputs.sha }}/profile/$f.svg"
             quente=0
             for t in 1 2 3 4 5 6 7 8; do
@@ -128,20 +111,11 @@ jobs:
           fi
 
       # O endereço muda a cada commit de card, e é isso que obriga o camo a
-      # buscar de novo. Sem esta troca o cache dele (12h no jsdelivr, 24h no
-      # streak-stats) mostraria o card de ontem por um dia inteiro.
+      # buscar de novo. Sem esta troca o cache dele mostraria o card de ontem.
       - name: Fixar o README no commit dos cards
         if: steps.cards.outputs.sha != ''
         run: |
-          # --sequencia SÓ quando o serviço de fora respondeu um card de verdade.
-          # Fixado durante uma falha dele, o camo busca na URL fria, recebe a
-          # carinha triste e o card SOME (medido em 17/08/2026). Sem pino novo o
-          # camo segue servindo a última cópia boa: velha, mas na tela.
-          if [ -n "${{ steps.fora.outputs.marca }}" ]; then
-            python3 scripts/pin-cards.py --fixar "${{ steps.cards.outputs.sha }}" --sequencia
-          else
-            python3 scripts/pin-cards.py --fixar "${{ steps.cards.outputs.sha }}"
-          fi
+          python3 scripts/pin-cards.py --fixar "${{ steps.cards.outputs.sha }}"
           git add README.md
           if git diff --cached --quiet; then
             echo "README já estava no pino certo."
