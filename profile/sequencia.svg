@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="195" viewBox="0 0 440 195" role="img" aria-label="Sequência de contribuições: 3.146 no total, 65 dias seguidos agora, 65 no recorde">
-  <title>Sequência de contribuições: 3.146 no total, 65 dias seguidos agora, 65 no recorde</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="195" viewBox="0 0 440 195" role="img" aria-label="Sequência de contribuições: 3.148 no total, 65 dias seguidos agora, 65 no recorde">
+  <title>Sequência de contribuições: 3.148 no total, 65 dias seguidos agora, 65 no recorde</title>
   <g font-family="'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif">
     <mask id="corte"><rect width="440" height="195" fill="white"/><ellipse cx="220.00" cy="32" rx="15" ry="20" fill="black"/></mask>
     <circle cx="220.00" cy="71" r="40" fill="none" stroke="#557EE5" stroke-width="5" mask="url(#corte)"/>
     <path transform="translate(220.00 32)" fill="#557EE5" d="M0,-18 C6,-10 12,-4 12,3 C12,10 6,16 0,16 C-6,16 -12,10 -12,3 C-12,-3 -8,-9 -4.5,-12 C-4.8,-6 -3,-3 0,-3 C2.8,-3 4,-6 3,-10 C2.2,-13 1,-15.6 0,-18 Z"/>
-    <text x="73.33" y="80" text-anchor="middle" font-size="28px" font-weight="700" fill="#7A7A85">3.146</text>
+    <text x="73.33" y="80" text-anchor="middle" font-size="28px" font-weight="700" fill="#7A7A85">3.148</text>
     <text x="73.33" y="116" text-anchor="middle" font-size="14px" font-weight="400" fill="#7A7A85">Total de Contribuições</text>
     <text x="73.33" y="146" text-anchor="middle" font-size="12px" font-weight="400" fill="#7A7A85">20 de abr. - Presente</text>
     <text x="366.67" y="80" text-anchor="middle" font-size="28px" font-weight="700" fill="#7A7A85">65</text>
