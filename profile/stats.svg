@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Estat&#237;sticas do GitHub de kami, Rank: B</title>
-        <desc id="descId">Total de estrelas: 0, Total de Commits  : 2336, Total de PRs: 1128, Total de Issues: 0, Contribuiu para (ano passado): 3</desc>
+        <desc id="descId">Total de estrelas: 0, Total de Commits  : 2360, Total de PRs: 1168, Total de Issues: 0, Contribuiu para (ano passado): 3</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 142.33756025405492;
+        stroke-dashoffset: 142.20068478721274;
       }
     }
   
@@ -177,7 +177,7 @@
         x="274.01"
         y="12.5"
         data-testid="commits"
-      >2.3k</text>
+      >2.4k</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -192,7 +192,7 @@
         x="274.01"
         y="12.5"
         data-testid="prs"
-      >1.1k</text>
+      >1.2k</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
