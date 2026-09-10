@@ -64,7 +64,7 @@
      como ser fresca e confiável ao mesmo tempo aqui. Com arquivo, o pior caso
      vira dado velho na tela, nunca buraco. A guarda recusa host novo.
      Para voltar a exibir as estatísticas, que seguem sendo geradas, basta colar:
-     <a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@a36f13628fcd5edd43d49b7195d7f0b2fe4c5dc9/profile/stats.svg" alt="Estatísticas do GitHub" height="190"></a>
+     <a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@28ab2b7d8b9383294a23c831cc6043e355feeafc/profile/stats.svg" alt="Estatísticas do GitHub" height="190"></a>
      A sequência sai do scripts/gerar-sequencia.py, que lê a API do GitHub. -->
-<a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@a36f13628fcd5edd43d49b7195d7f0b2fe4c5dc9/profile/langs.svg" alt="Linguagens mais usadas" height="190"></a>
-<a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@a36f13628fcd5edd43d49b7195d7f0b2fe4c5dc9/profile/sequencia.svg" alt="Sequência de contribuições" height="190"></a>
+<a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@28ab2b7d8b9383294a23c831cc6043e355feeafc/profile/langs.svg" alt="Linguagens mais usadas" height="190"></a>
+<a href="#"><img src="https://cdn.jsdelivr.net/gh/kaminagakur4/kaminagakur4@28ab2b7d8b9383294a23c831cc6043e355feeafc/profile/sequencia.svg" alt="Sequência de contribuições" height="190"></a>
